@@ -23,7 +23,6 @@
 
     <!-- Manifest für PWA-Unterstützung -->
     <link rel="manifest" href="images/site.webmanifest">
-
 </head>
 <body>
 <header>
@@ -111,49 +110,5 @@
         <a href="datenschutzerklaerung.html" aria-label="Datenschutzerklärung der BürgerFreundlichePartei">Datenschutzerklärung</a>
     </p>
 </footer>
-
-<div id="cookie-banner">
-    <h4>Wir verwenden Cookies</h4>
-    <p>Wir nutzen Cookies, um unsere Webseite zu optimieren und Ihnen ein besseres Erlebnis zu bieten. Sie können Ihre Präferenzen anpassen oder alle Cookies akzeptieren/ablehnen.</p>
-    <div>
-        <button id="accept-all">Alle akzeptieren</button>
-        <button id="reject-all">Alle ablehnen</button>
-        <button id="customize">Einstellungen</button>
-    </div>
-</div>
-
-<script>
-    const banner = document.getElementById("cookie-banner");
-    const acceptAllButton = document.getElementById("accept-all");
-    const rejectAllButton = document.getElementById("reject-all");
-    const customizeButton = document.getElementById("customize");
-
-    // Funktion für "Alle akzeptieren"
-    acceptAllButton.addEventListener("click", () => {
-        document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 365;
-        hideBanner();
-    });
-
-    // Funktion für "Alle ablehnen"
-    rejectAllButton.addEventListener("click", () => {
-        document.cookie = "cookiesAccepted=false; path=/; max-age=" + 60 * 60 * 24 * 365;
-        hideBanner();
-    });
-
-    // Funktion für "Einstellungen"
-    customizeButton.addEventListener("click", () => {
-        alert("Hier könnten Sie ein modales Fenster oder eine Seite für die Cookie-Einstellungen einfügen.");
-    });
-
-    // Funktion zum Verstecken des Cookie-Banners
-    function hideBanner() {
-        banner.style.display = "none";
-    }
-
-    // Überprüfen, ob die Cookies bereits akzeptiert oder abgelehnt wurden
-    if (document.cookie.includes("cookiesAccepted=true") || document.cookie.includes("cookiesAccepted=false")) {
-        hideBanner();
-    }
-</script>
 </body>
 </html>
