@@ -9,8 +9,8 @@ body {
 
 header {
     background-color: #009EE0;
-    color: #fff;
-    padding: 1rem 0;
+    color: white;
+    padding: 1rem 20px;
     text-align: center;
 }
 
@@ -45,12 +45,26 @@ main {
 }
 
 section {
+    margin: 20px 0;
     margin-bottom: 2rem;
+}
+
+section h1, section h2 {
+    color: #009EE0;
+}
+
+a {
+    color: #009EE0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 footer {
     background-color: #333;
-    color: #fff;
+    color: white;
     text-align: center;
     padding: 1rem 0;
 }

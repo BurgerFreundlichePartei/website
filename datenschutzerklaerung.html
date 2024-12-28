@@ -2,44 +2,22 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Datenschutzerklärung der BürgerFreundlichePartei (BFREI)">
-    <meta name="author" content="BFREI">
     <title>Datenschutzerklärung - BürgerFreundlichePartei (BFREI)</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background-color: #009EE0;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        section {
-            margin: 20px 0;
-        }
-        h1, h2 {
-            color: #009EE0;
-        }
-        a {
-            color: #009EE0;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <script src="web-component/js/head_meta_component.js" defer></script>
+    <script src="web-component/js/head_link_component.js" defer></script>
+    <script src="web-component/js/navigation_component.js" defer></script>
+    <script src="web-component/js/header_component.js" defer></script>
+    <script src="web-component/js/footer_component.js" defer></script>
+    <script src="web-component/js/favicon_component.js" defer></script>
+    <head-meta-component></head-meta-component>
+    <head-link-component></head-link-component>
+    <favicon-component></favicon-component>
 </head>
 <body>
-<header>
-    <h1>Datenschutzerklärung</h1>
-</header>
+<header-component></header-component>
+<navigation-component></navigation-component>
+
+<h1>Datenschutzerklärung</h1>
 
 <section>
     <h2>1. Verantwortliche Stelle</h2>
@@ -119,8 +97,8 @@
     <p>Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen. Bitte informieren Sie sich regelmäßig über den aktuellen Stand.</p>
 </section>
 
-<footer>
-    <p>&copy; 2024 BürgerFreundlichePartei (BFREI). Alle Rechte vorbehalten.</p>
-</footer>
+
+<footer-component></footer-component>
+
 </body>
 </html>
