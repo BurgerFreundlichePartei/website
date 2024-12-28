@@ -7,6 +7,23 @@
     <meta name="author" content="BFREI">
     <title>BFREI - Für eine transparente Demokratie</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Standard Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Favicon für Browser (32x32 und 16x16) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+    <!-- Apple Touch Icon für iOS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+    <!-- Android Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
+
+    <!-- Manifest für PWA-Unterstützung -->
+    <link rel="manifest" href="images/site.webmanifest">
+
 </head>
 <body>
 <header>
@@ -15,14 +32,14 @@
 </header>
 
 <nav>
-    <a href="#vision">Unsere Vision</a>
-    <a href="#ziele">Unsere Ziele</a>
-    <a href="#kontakt">Kontakt</a>
-    <a href="#mitglied">Mitglied werden</a>
-    <a href="https://github.com/BurgerFreundlichePartei/grundsatzprogramm/blob/main/Satzung.md" target="_blank">Satzung</a>
-    <a href="https://github.com/BurgerFreundlichePartei/grundsatzprogramm/blob/main/FAQ.md" target="_blank">FAQ</a>
-    <a href="https://github.com/BurgerFreundlichePartei/grundsatzprogramm/blob/main/README.md" target="_blank">Grundsatzprogramm</a>
-    <a href="https://github.com/BurgerFreundlichePartei/grundsatzprogramm/blob/main/Parteiprogramm.md" target="_blank">Parteiprogramm</a>
+    <a href="#vision" aria-label="Unsere Vision">Unsere Vision</a>
+    <a href="#ziele" aria-label="Unsere Ziele">Unsere Ziele</a>
+    <a href="#kontakt" aria-label="Kontakt">Kontakt</a>
+    <a href="#mitglied" aria-label="Mitglied werden">Mitglied werden</a>
+    <a href="https://github.com/BurgerFreundlichePartei/grundsatzprogramm/blob/main/Satzung.md" target="_blank" aria-label="Satzung auf GitHub">Satzung</a>
+    <a href="https://github.com/BurgerFreundlichePartei/grundsatzprogramm/blob/main/FAQ.md" target="_blank" aria-label="FAQ auf GitHub">FAQ</a>
+    <a href="https://github.com/BurgerFreundlichePartei/grundsatzprogramm/blob/main/README.md" target="_blank" aria-label="Grundsatzprogramm auf GitHub">Grundsatzprogramm</a>
+    <a href="https://github.com/BurgerFreundlichePartei/grundsatzprogramm/blob/main/Parteiprogramm.md" target="_blank" aria-label="Parteiprogramm auf GitHub">Parteiprogramm</a>
 </nav>
 
 <main>
@@ -89,7 +106,10 @@
         <a href="https://x.com/BFREI119648" aria-label="Twitter">Twitter</a> |
         <a href="https://github.com/BurgerFreundlichePartei" aria-label="GitHub">GitHub</a>
     </p>
-    <p><a href="impressum.html">Impressum</a></p>
+    <p>
+        <a href="impressum.html"  aria-label="Impressum der BürgerFreundlichePartei">Impressum</a>
+        <a href="datenschutzerklaerung.html" aria-label="Datenschutzerklärung der BürgerFreundlichePartei">Datenschutzerklärung</a>
+    </p>
 </footer>
 </body>
 </html>
