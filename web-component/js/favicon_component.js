@@ -10,4 +10,4 @@ class FaviconComponent extends HTMLElement {
     }
 }
 
-customElements.define('favicon-component', HeadComponent);
+customElements.define('favicon-component', FaviconComponent);
