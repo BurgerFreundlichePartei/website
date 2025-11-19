@@ -14,4 +14,4 @@ class MembershipComponent extends HTMLElement {
     }
 }
 
-customElements.define('membership-component', HomeIntroComponent);
+customElements.define('membership-component', MembershipComponent);
