@@ -1,4 +1,4 @@
-class HeadComponent extends HTMLElement {
+class FaviconComponent extends HTMLElement {
     connectedCallback() {
         fetch('web-component/html/favicon_component.html')
             .then(response => response.text())
