@@ -1,4 +1,3 @@
-
 class HeaderComponent extends HTMLElement {
     connectedCallback() {
         fetch('web-component/html/header.html')

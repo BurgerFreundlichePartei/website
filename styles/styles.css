@@ -84,3 +84,122 @@ footer a:hover {
     padding: 10px;
     background-color: #f9f9f9; /* Leichte Hintergrundfarbe */
 }
+
+/* --- Buchreihe: Das politische Profil – Die Architektur der Freiheit --- */
+
+.books-section {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.books-header h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.books-series-subtitle {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.books-series-desc {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+}
+
+.book-card {
+    border-radius: 0.75rem;
+    border: 1px solid #e0e0e0;
+    padding: 1rem 1.25rem;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.book-band-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #555;
+}
+
+.book-title {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.book-subtitle {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.book-desc {
+    margin: 0.5rem 0 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.book-actions {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.book-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid #1e4f9a;
+    background: #1e4f9a;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.book-btn:hover {
+    background: #163a70;
+    border-color: #163a70;
+    color: #fff;
+}
+
+.book-btn-secondary {
+    background: transparent;
+    color: #1e4f9a;
+}
+
+.book-btn-secondary:hover {
+    background: #e6eefc;
+    color: #163a70;
+}
+
+@media (max-width: 600px) {
+    .books-section {
+        padding: 1.25rem;
+        margin: 1.5rem 0.5rem;
+    }
+}
+
