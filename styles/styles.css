@@ -88,19 +88,16 @@ footer a:hover {
 /* --- Buchreihe: Das politische Profil – Die Architektur der Freiheit --- */
 
 .books-section {
-    max-width: 1100px;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    box-sizing: border-box;
-    background-color: #ffffff;
-    border-radius: 0.75rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    margin: 2rem 0;
+    padding: 0;
 }
 
+/* Überschrift fügt sich in das normale Section-Design ein */
 .books-header h2 {
     margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+    font-size: 2rem; /* ähnlich header/section */
+    color: #009EE0;
 }
 
 .books-series-subtitle {
@@ -109,27 +106,24 @@ footer a:hover {
     color: #555;
 }
 
-.books-series-desc {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
+/* Grid bleibt, aber ohne "Fancy-Card"-Look */
 .books-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.25rem;
+    gap: 1.5rem;
 }
 
+/* Karten optisch näher an normale Sections rücken */
 .book-card {
-    border-radius: 0.75rem;
-    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
     padding: 1rem 1.25rem;
-    background: #fafafa;
+    background: #ffffff;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    box-shadow: none; /* kein Schatten mehr */
+    border-left: 4px solid #009EE0; /* Farbakzent wie dein Blau */
 }
 
 .book-band-label {
@@ -142,13 +136,14 @@ footer a:hover {
 
 .book-title {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    color: #009EE0;
 }
 
 .book-subtitle {
     margin: 0;
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 0.95rem;
+    color: #333;
 }
 
 .book-desc {
@@ -157,49 +152,51 @@ footer a:hover {
     line-height: 1.4;
 }
 
+/* Aktionen: schlicht, etwas Abstand nach oben */
 .book-actions {
-    margin-top: auto;
+    margin-top: 0.75rem;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
 
+/* Primärer Button: Orange wie Navigation */
 .book-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 0.9rem;
-    border-radius: 999px;
-    font-size: 0.85rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
     font-weight: 500;
     text-decoration: none;
-    border: 1px solid #1e4f9a;
-    background: #1e4f9a;
+    border: 1px solid #f18e00;
+    background: #f18e00;
     color: #fff;
     cursor: pointer;
     transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 .book-btn:hover {
-    background: #163a70;
-    border-color: #163a70;
+    background: #ffad42;
+    border-color: #ffad42;
     color: #fff;
 }
 
+/* Sekundärer Button: wie normaler Textlink, aber mit Rahmen */
 .book-btn-secondary {
     background: transparent;
-    color: #1e4f9a;
+    color: #009EE0;
+    border-color: #009EE0;
 }
 
 .book-btn-secondary:hover {
     background: #e6eefc;
-    color: #163a70;
+    color: #009EE0;
 }
 
 @media (max-width: 600px) {
     .books-section {
-        padding: 1.25rem;
-        margin: 1.5rem 0.5rem;
+        margin: 1.5rem 0;
     }
 }
-
