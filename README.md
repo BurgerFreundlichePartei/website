@@ -1,73 +1,129 @@
-# BürgerFreundlichePartei (BFREI) - Offizielle Webseite
-
-Dies ist das offizielle Repository der Webseite der BürgerFreundlichePartei (BFREI), die für eine transparente und bürgerfreundliche Demokratie steht. Die Webseite enthält Informationen über die Partei, ihre Ziele, Vision und Kontaktmöglichkeiten sowie rechtlich erforderliche Dokumente wie Impressum und Datenschutzerklärung.
-
-## Inhalt
-
-- **`index.html`**: Startseite der Webseite mit Informationen über die BFREI.
-- **`datenschutzerklaerung.html`**: Datenschutzerklärung gemäß DSGVO.
-- **`impressum.html`**: Impressum der Partei.
-- **`styles.css`**: Zentrale CSS-Datei für das Design der Webseite.
-- **`images/`**: Ordner mit Bildern, Logos und Favicons.
-
-## Merkmale der Webseite
-
-- **Barrierefreiheit**:
-  - Alt-Texte für Bilder.
-  - ARIA-Labels für Links.
-  - Semantisch korrekter HTML-Code.
-- **Rechtssicherheit**:
-  - Enthält Impressum und Datenschutzerklärung.
-  - Verlinkung zu externen Ressourcen (z. B. Social Media, GitHub).
-- **Modularität**:
-  - Leicht erweiterbar für zukünftige Inhalte.
-
-## Installation
-
-1. **Klonen des Repositories**:
-   ```bash
-   git clone https://github.com/BurgerFreundlichePartei/website.git
-   ```
-2. **Dateien auf einem lokalen Webserver ausführen** (z. B. mit Python):
-   ```bash
-   python -m http.server
-   ```
-3. Im Browser unter `http://localhost:8000` aufrufen.
-
-## Deployment
-
-Die Webseite kann über GitHub Pages bereitgestellt werden:
-
-1. **Repository-Einstellungen öffnen**.
-2. **GitHub Pages aktivieren**:
-   - Branch: `main`
-   - Ordner: `/root` (Standard).
-3. Die Seite ist unter `https://BurgerFreundlichePartei.github.io/website/` erreichbar.
-
-## Anpassungen
-
-- **Favicons**:
-  - Im Ordner `images/` befinden sich verschiedene Formate für Favicons.
-  - Bei Bedarf die `link`-Tags im `<head>` der `index.html` anpassen.
-- **Social Media Links**:
-  - Aktualisiere die Links im Footer-Bereich der `index.html`.
-
-## Rechtliche Hinweise
-
-Die Webseite erfüllt die Anforderungen der DSGVO durch die Bereitstellung von:
-
-- Einer ausführlichen Datenschutzerklärung.
-- Einem Impressum mit vollständigen Kontaktinformationen.
-
-## Kontakt
-
-BürgerFreundlichePartei (BFREI)  
-Seestraße 68  
-71638 Ludwigsburg  
-E-Mail: [buergerfreundliche.partei@gmail.com](mailto:buergerfreundliche.partei@gmail.com)  
+Hier ist die **aktualisierte README**, präziser, klarer und passend zum aktuellen Stand deiner Webseite (mit Webcomponents, Artikellisten, Buchkacheln, responsive Layout etc.).
+Ich habe nichts „aufgeblasen“, sondern sauber und strukturiert optimiert.
 
 ---
 
-### Lizenz
-Der Inhalt dieses Repositories ist urheberrechtlich geschützt und darf nur mit ausdrücklicher Genehmigung der BürgerFreundlichePartei (BFREI) verwendet werden.
+# 📘 BürgerFreundlichePartei (BFREI) – Offizielle Webseite
 
+Dies ist das offizielle Repository der BürgerFreundlichenPartei (BFREI).
+Die Webseite stellt die Vision, Ziele und Veröffentlichungen der Partei dar und bietet rechtlich erforderliche Informationen wie Impressum und Datenschutzerklärung.
+
+---
+
+## 📂 Inhalt
+
+* **`index.html`** – Startseite mit Überblick zur Partei, Vision und Zielen.
+* **`publikationen.html`** – Übersicht über Bücher und politische Artikel.
+* **`impressum.html`** – Gesetzlich vorgeschriebenes Impressum.
+* **`datenschutzerklaerung.html`** – Datenschutzerklärung gemäß DSGVO.
+* **`styles/`** – Zentrales CSS-Layout (`styles.css`).
+* **`web-component/`** – Eigene Webcomponents für Bücher- und Artikellisten.
+
+    * `html/booklist_component.html`
+    * `html/article_list_component.html`
+    * `js/article_list_component.js`
+* **`images/`** – Logos, Favicons und andere statische Medien.
+
+---
+
+## ⭐ Merkmale der Webseite
+
+### **Barrierefreiheit**
+
+* Alt-Texte für Bilder
+* ARIA-Attribute zur besseren Navigation
+* Semantisch korrekter HTML-Aufbau
+* Responsive Design (mobil optimiert)
+
+### **Modulare Architektur**
+
+* Verwendung von Webcomponents für:
+
+    * **Buchliste**
+    * **Artikelliste** (politische Texte, automatisch erweiterbar)
+* Klare Trennung von Layout, Logik und Inhalt
+* Leicht wartbar und erweiterbar
+
+### **Rechtssicherheit**
+
+* DSGVO-konformes Impressum
+* DSGVO-konforme Datenschutzerklärung
+* Externe Links als neue Tabs (`target="_blank"` + `rel="noopener noreferrer"`)
+
+---
+
+## 🚀 Lokale Nutzung
+
+1. **Repository klonen**
+
+   ```bash
+   git clone https://github.com/BurgerFreundlichePartei/website.git
+   ```
+2. **Lokalen Webserver starten**
+
+   ```bash
+   python -m http.server
+   ```
+3. Im Browser öffnen:
+   **[http://localhost:8000](http://localhost:8000)**
+
+---
+
+## 🌐 Deployment (GitHub Pages)
+
+1. GitHub → *Settings* → *Pages*
+2. **Source:**
+
+    * Branch: `main`
+    * Ordner: `/root`
+3. Seite erreichbar unter:
+
+**[https://BurgerFreundlichePartei.github.io/website/](https://BurgerFreundlichePartei.github.io/website/)**
+
+---
+
+## 🛠️ Anpassungsmöglichkeiten
+
+### **Favicons**
+
+* Unter `/images/` verfügbar
+* Anpassbar über `<link>`-Tags im `<head>` der HTML-Dateien
+
+### **Social-Media-Links**
+
+* Editierbar im Footer der `index.html`
+
+### **Artikel- & Bücherlisten**
+
+* Inhalte werden über eigene Webcomponents eingebunden
+* Politische Artikel erscheinen als **responsive Kachel-Liste**
+* URLs können einfach in den Komponenten ergänzt werden
+
+---
+
+## ⚖️ Rechtliche Hinweise
+
+Die Webseite enthält:
+
+* Vollständiges Impressum
+* DSGVO-konforme Datenschutzerklärung
+
+Alle Inhalte sind Eigentum der **BürgerFreundlichenPartei (BFREI)** und dürfen nicht ohne Genehmigung verwendet werden.
+
+---
+
+## 📬 Kontakt
+
+**BürgerFreundlichePartei (BFREI)**
+Seestraße 68
+71638 Ludwigsburg
+E-Mail: [buergerfreundliche.partei@gmail.com](mailto:buergerfreundliche.partei@gmail.com)
+
+---
+
+## 📄 Lizenz
+
+Alle Inhalte sind urheberrechtlich geschützt.
+Nutzung oder Weitergabe nur mit ausdrücklicher Zustimmung der BFREI.
+
+---
