@@ -200,3 +200,41 @@ footer a:hover {
         margin: 1.5rem 0;
     }
 }
+.article-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+
+@media (min-width: 600px) {
+    .article-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 900px) {
+    .article-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.article-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.article-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+}
+
+.article-link {
+    display: inline-block;
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
