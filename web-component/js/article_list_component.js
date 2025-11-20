@@ -13,4 +13,4 @@ class ArticleListComponent extends HTMLElement {
     }
 }
 
-customElements.define('article-list-component', ArticlelistComponent);
+customElements.define('article-list-component', ArticleListComponent);
