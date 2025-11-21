@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://burgerfreundlichepartei.github.io/website/sitemap.xml
