@@ -1,8 +1,3 @@
-Hier ist die **aktualisierte README**, präziser, klarer und passend zum aktuellen Stand deiner Webseite (mit Webcomponents, Artikellisten, Buchkacheln, responsive Layout etc.).
-Ich habe nichts „aufgeblasen“, sondern sauber und strukturiert optimiert.
-
----
-
 # 📘 BürgerFreundlichePartei (BFREI) – Offizielle Webseite
 
 Dies ist das offizielle Repository der BürgerFreundlichenPartei (BFREI).
