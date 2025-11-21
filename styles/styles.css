@@ -1,60 +1,113 @@
+/* ============================
+   Farb-Variablen & Themes
+   ============================ */
+
+:root {
+    /* Basis-Farben */
+    --color-bg: #ffffff;
+    --color-text: #111111;
+    --color-border: #e0e0e0;
+
+    /* BFREI-Brandfarben */
+    --bfrei-blue: #009EE0;
+    --bfrei-blue-dark: #0078ad;
+
+    --bfrei-orange: #f18e00;
+    --bfrei-orange-light: #ffad42;
+
+    /* Abgeleitete Farben */
+    --color-primary: var(--bfrei-blue);
+    --color-primary-hover: var(--bfrei-blue-dark);
+
+    --color-secondary: var(--bfrei-orange);
+    --color-secondary-hover: var(--bfrei-orange-light);
+
+    --color-muted: #555555;
+    --color-muted-soft: #777777;
+
+    --color-hero-bg: #f5f7fb;
+    --color-nav-bg: var(--bfrei-orange);
+
+    --color-card-bg: #ffffff;
+    --color-footer-bg: #333333;
+    --color-footer-text: #f5f5f5;
+
+    /* Kontrastfarben */
+    --color-on-primary: #ffffff;
+    --color-on-secondary: #ffffff;
+
+    /* Effekte */
+    --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --color-primary-soft: rgba(0, 91, 187, 0.08);
+}
+
+:root[data-theme="dark"] {
+    --color-bg: #121212;
+    --color-text: #f5f5f5;
+    --color-border: #333333;
+
+    --bfrei-blue: #0078ad;
+    --bfrei-blue-dark: #005f85;
+
+    --bfrei-orange: #d67c00;
+    --bfrei-orange-light: #ffb35a;
+
+    --color-hero-bg: #1b1b1f;
+    --color-nav-bg: var(--bfrei-orange);
+
+    --color-card-bg: #1c1c1c;
+    --color-footer-bg: #000000;
+    --color-footer-text: #e0e0e0;
+
+    --color-muted: #bbbbbb;
+    --color-muted-soft: #999999;
+
+    --color-primary-soft: rgba(77, 163, 255, 0.12);
+}
+
+/* ============================
+   Basislayout & Typografie
+   ============================ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-header {
-    background-color: #009EE0;
-    color: white;
-    padding: 1rem 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-header p {
-    margin: 0;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    background: #f18e00;
-}
-
-nav a {
-    color: white;
-    padding: 1rem;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-nav a:hover {
-    background: #ffad42;
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 
 main {
-    padding: 2rem;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 section {
-    margin: 20px 0;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 
-section h1, section h2 {
-    color: #009EE0;
+section h1,
+section h2 {
+    color: var(--color-primary);
+    margin-top: 0;
 }
+
+/* Links */
 
 a {
-    color: #009EE0;
+    color: var(--color-primary);
     text-decoration: none;
 }
 
@@ -62,68 +115,274 @@ a:hover {
     text-decoration: underline;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
+/* Bilder */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-footer a {
-    color: #009EE0;
+/* ============================
+   Header + Theme-Toggle
+   ============================ */
+
+.site-header {
+    padding: 1rem 1rem 0.5rem;
+    background-color: var(--bfrei-blue);
+    color: var(--color-on-primary);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.site-header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-header-text h1 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.3rem;
+    color: var(--color-on-primary);
+}
+
+.site-header-text p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-on-primary);
+}
+
+/* Theme-Toggle-Button */
+
+.theme-toggle {
+    border: 1px solid var(--color-border);
+    background-color: transparent;
+    color: var(--color-on-primary);
+    border-radius: 999px;
+    padding: 0.3rem 0.6rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* ============================
+   Navigation (sticky + mobil)
+   ============================ */
+
+.main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--color-nav-bg);
+    border-bottom: none;
+}
+
+.main-nav .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+
+.main-nav .nav-logo {
+    font-weight: 700;
     text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    color: var(--color-on-secondary);
 }
 
-footer a:hover {
-    text-decoration: underline;
+/* Hamburger-Button */
+
+.main-nav .nav-toggle {
+    font-size: 1.4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    color: var(--color-on-secondary);
 }
+
+/* Link-Bereich (mobile) */
+
+.main-nav .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.main-nav .nav-links a {
+    text-decoration: none;
+    padding: 0.3rem 0;
+    color: var(--color-on-secondary);
+}
+
+/* Wenn geöffnet (mobile) */
+
+.main-nav .nav-links.is-open {
+    display: flex;
+}
+
+/* Hover */
+
+.main-nav .nav-links a:hover {
+    background-color: var(--bfrei-orange-light);
+}
+
+/* Desktop-Ansicht */
+
+@media (min-width: 768px) {
+    .main-nav .nav-toggle {
+        display: none;
+    }
+
+    .main-nav .nav-inner {
+        align-items: center;
+    }
+
+    .main-nav .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+        margin-left: 2rem;
+    }
+}
+
+/* ============================
+   Hero / Startbereich
+   ============================ */
+
+.hero {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: var(--color-hero-bg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.hero-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+
+.hero-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Hero-Buttons */
+
+.hero-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    text-decoration: none;
+    background-color: var(--bfrei-blue);
+    color: var(--color-on-primary);
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.hero-btn:hover {
+    background-color: var(--bfrei-blue-dark);
+}
+
+.hero-btn.secondary {
+    background-color: var(--bfrei-orange);
+    color: var(--color-on-secondary);
+}
+
+.hero-btn.secondary:hover {
+    background-color: var(--bfrei-orange-light);
+}
+
+/* Hero – Desktop */
+
+@media (min-width: 768px) {
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-text {
+        font-size: 1.15rem;
+    }
+}
+
+/* ============================
+   Allgemeine Sektionen / Iframe
+   ============================ */
 
 #iframe-container {
-    border: 2px solid #009EE0; /* Cyan-Rahmenfarbe */
+    border: 2px solid var(--color-primary);
     border-radius: 10px;
     padding: 10px;
-    background-color: #f9f9f9; /* Leichte Hintergrundfarbe */
+    background-color: var(--color-card-bg);
 }
 
-/* --- Buchreihe: Das politische Profil – Die Architektur der Freiheit --- */
+/* ============================
+   Buchreihe / Cards
+   ============================ */
 
 .books-section {
     margin: 2rem 0;
     padding: 0;
 }
 
-/* Überschrift fügt sich in das normale Section-Design ein */
 .books-header h2 {
     margin-top: 0;
     margin-bottom: 0.75rem;
-    font-size: 2rem; /* ähnlich header/section */
-    color: #333;
+    font-size: 2rem;
+    color: var(--color-text);
 }
 
 .books-series-subtitle {
     margin: 0;
     font-size: 0.95rem;
-    color: #555;
+    color: var(--color-muted);
 }
 
-/* Grid bleibt, aber ohne "Fancy-Card"-Look */
 .books-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
 }
 
-/* Karten optisch näher an normale Sections rücken */
 .book-card {
     border-radius: 4px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-border);
     padding: 1rem 1.25rem;
-    background: #ffffff;
+    background: var(--color-card-bg);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    box-shadow: none; /* kein Schatten mehr */
-    border-left: 4px solid #009EE0; /* Farbakzent wie dein Blau */
+    box-shadow: var(--shadow-soft);
+    border-left: 4px solid var(--color-primary);
 }
 
 .book-band-label {
@@ -131,19 +390,19 @@ footer a:hover {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    color: #555;
+    color: var(--color-muted-soft);
 }
 
 .book-title {
     margin: 0;
     font-size: 1.2rem;
-    color: #009EE0;
+    color: var(--color-primary);
 }
 
 .book-subtitle {
     margin: 0;
     font-size: 0.95rem;
-    color: #333;
+    color: var(--color-text);
 }
 
 .book-desc {
@@ -152,7 +411,6 @@ footer a:hover {
     line-height: 1.4;
 }
 
-/* Aktionen: schlicht, etwas Abstand nach oben */
 .book-actions {
     margin-top: 0.75rem;
     display: flex;
@@ -160,7 +418,8 @@ footer a:hover {
     gap: 0.5rem;
 }
 
-/* Primärer Button: Orange wie Navigation */
+/* Buttons in Cards */
+
 .book-btn {
     display: inline-flex;
     align-items: center;
@@ -170,36 +429,45 @@ footer a:hover {
     font-size: 0.9rem;
     font-weight: 500;
     text-decoration: none;
-    border: 1px solid #f18e00;
-    background: #f18e00;
-    color: #fff;
+    border: 1px solid var(--color-secondary);
+    background: var(--color-secondary);
+    color: var(--color-on-secondary);
     cursor: pointer;
-    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    transition:
+            background 0.15s ease,
+            color 0.15s ease,
+            border-color 0.15s ease;
 }
 
 .book-btn:hover {
-    background: #ffad42;
-    border-color: #ffad42;
-    color: #fff;
+    background: var(--color-secondary-hover);
+    border-color: var(--color-secondary-hover);
+    color: var(--color-on-secondary);
 }
 
-/* Sekundärer Button: wie normaler Textlink, aber mit Rahmen */
 .book-btn-secondary {
     background: transparent;
-    color: #009EE0;
-    border-color: #009EE0;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
 }
 
 .book-btn-secondary:hover {
-    background: #e6eefc;
-    color: #009EE0;
+    background: var(--color-primary-soft);
+    color: var(--color-primary);
 }
+
+/* Mobile Buch-Sektion */
 
 @media (max-width: 600px) {
     .books-section {
         margin: 1.5rem 0;
     }
 }
+
+/* ============================
+   Artikel-Grid
+   ============================ */
+
 .article-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -220,16 +488,17 @@ footer a:hover {
 }
 
 .article-card {
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 1rem;
-    background: #fff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    background: var(--color-card-bg);
+    box-shadow: var(--shadow-soft);
 }
 
 .article-card h3 {
     margin: 0 0 0.5rem;
     font-size: 1rem;
+    color: var(--color-text);
 }
 
 .article-link {
@@ -238,10 +507,15 @@ footer a:hover {
     font-size: 0.9rem;
     text-decoration: underline;
 }
+
+/* ============================
+   Mitglieds-Button
+   ============================ */
+
 .mitglied-btn {
     display: inline-block;
-    background: #009EE0;
-    color: #fff;
+    background: var(--bfrei-blue);
+    color: var(--color-on-primary);
     padding: 0.75rem 1.25rem;
     border-radius: 6px;
     text-decoration: none;
@@ -250,5 +524,25 @@ footer a:hover {
 }
 
 .mitglied-btn:hover {
-    background: #0078ad;
+    background: var(--bfrei-blue-dark);
+}
+
+/* ============================
+   Footer
+   ============================ */
+
+footer {
+    background-color: var(--color-footer-bg);
+    color: var(--color-footer-text);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
