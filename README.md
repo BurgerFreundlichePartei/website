@@ -1,66 +1,83 @@
 # 📘 BürgerFreundlichePartei (BFREI) – Offizielle Webseite
 
 Dies ist das offizielle Repository der BürgerFreundlichenPartei (BFREI).
-Die Webseite stellt die Vision, Ziele und Veröffentlichungen der Partei dar und bietet rechtlich erforderliche Informationen wie Impressum und Datenschutzerklärung.
+Die Webseite stellt die Vision, Ziele, Veröffentlichungen und rechtlich
+erforderlichen Informationen bereit (Impressum, Datenschutzerklärung).
 
 ---
 
 ## 📂 Inhalt
 
-* **`index.html`** – Startseite mit Überblick zur Partei, Vision und Zielen.
-* **`publikationen.html`** – Übersicht über Bücher und politische Artikel.
-* **`impressum.html`** – Gesetzlich vorgeschriebenes Impressum.
-* **`datenschutzerklaerung.html`** – Datenschutzerklärung gemäß DSGVO.
-* **`styles/`** – Zentrales CSS-Layout (`styles.css`).
-* **`web-component/`** – Eigene Webcomponents für Bücher- und Artikellisten.
+**Hauptseiten**
+- `index.html` – Startseite mit Vision, Zielen und Hero-Bereich.
+- `publikationen.html` – Übersicht über Bücher und politische Artikel.
+- `vision.html` – Ausführliche Darstellung der Vision der Partei.
+- `ziele.html` – Vollständige Liste der politischen Ziele.
+- `spenden.html` – Spendenübersicht inkl. Kontodaten-Komponente.
+- `impressum.html` – Gesetzlich vorgeschriebenes Impressum.
+- `datenschutzerklaerung.html` – Datenschutzerklärung gemäß DSGVO.
 
-    * `html/booklist_component.html`
-    * `html/article_list_component.html`
-    * `js/article_list_component.js`
-* **`images/`** – Logos, Favicons und andere statische Medien.
+**Stile**
+- `styles/styles.css` – Zentrales Theme (Light/Dark), Layout und Komponenten-Styling.
+
+**Web Components**
+- `web-component/html/header_component.html`  
+- `web-component/html/navigation_component.html`  
+- `web-component/html/booklist_component.html`  
+- `web-component/html/article_list_component.html`  
+- `web-component/html/bank_account_component.html`  
+- *(weitere Komponenten unter `/html` und `/js`)*
+
+**Assets**
+- `images/` – Logos, Favicons, Social-Media-Grafiken
+- `assets/` – Symbolgrafiken
 
 ---
 
 ## ⭐ Merkmale der Webseite
 
-### **Barrierefreiheit**
+### 🌗 **Dark-/Light-Theme**
+- automatisches Theme abhängig vom System
+- manuelle Umschaltung via Theme-Button (persistiert in localStorage)
 
-* Alt-Texte für Bilder
-* ARIA-Attribute zur besseren Navigation
-* Semantisch korrekter HTML-Aufbau
-* Responsive Design (mobil optimiert)
+### 🧩 **Modulare Architektur (Web Components)**
+- Header, Navigation, Footer
+- Buchliste (inkl. Amazon-/EPUB-/GitHub-Links)
+- Artikelliste
+- Bank-/Spenden-Komponente mit Copy-Buttons (IBAN, BIC)
+- Saubere Trennung: HTML, JS, CSS unabhängig voneinander wartbar
 
-### **Modulare Architektur**
+### ♿ **Barrierefreiheit**
+- ARIA-Labels für Navigation, Buttons und Listen
+- Semantische HTML-Struktur
+- Fokussichtbar, kontrastoptimierte Theme-Farben
+- Responsive auf Mobile, Tablet und Desktop
 
-* Verwendung von Webcomponents für:
-
-    * **Buchliste**
-    * **Artikelliste** (politische Texte, automatisch erweiterbar)
-* Klare Trennung von Layout, Logik und Inhalt
-* Leicht wartbar und erweiterbar
-
-### **Rechtssicherheit**
-
-* DSGVO-konformes Impressum
-* DSGVO-konforme Datenschutzerklärung
-* Externe Links als neue Tabs (`target="_blank"` + `rel="noopener noreferrer"`)
+### ⚖️ **Rechtssicherheit**
+- DSGVO-konformes Impressum
+- DSGVO-konforme Datenschutzerklärung
+- Externe Links öffnen in separaten Tabs (`target="_blank" rel="noopener"`)
 
 ---
 
 ## 🚀 Lokale Nutzung
 
 1. **Repository klonen**
-
    ```bash
    git clone https://github.com/BurgerFreundlichePartei/website.git
    ```
+
 2. **Lokalen Webserver starten**
 
    ```bash
    python -m http.server
    ```
-3. Im Browser öffnen:
+
+3. Seite öffnen:
    **[http://localhost:8000](http://localhost:8000)**
+
+*(Hinweis: Die Clipboard-Funktion (IBAN/BIC kopieren) benötigt einen sicheren Kontext.
+Sie funktioniert vollständig unter HTTPS und eingeschränkt lokal.)*
 
 ---
 
@@ -79,31 +96,27 @@ Die Webseite stellt die Vision, Ziele und Veröffentlichungen der Partei dar und
 
 ## 🛠️ Anpassungsmöglichkeiten
 
-### **Favicons**
+### **Webcomponents erweitern**
 
-* Unter `/images/` verfügbar
-* Anpassbar über `<link>`-Tags im `<head>` der HTML-Dateien
+* Neue politische Artikel einfach in `article_list_component.html` ergänzen
+* Neue Bücher in `booklist_component.html` hinzufügen
 
-### **Social-Media-Links**
+### **Kontodaten aktualisieren**
 
-* Editierbar im Footer der `index.html`
+* Spendenkonto anpassen in `bank_account_component.html`
 
-### **Artikel- & Bücherlisten**
+### **Navigation erweitern**
 
-* Inhalte werden über eigene Webcomponents eingebunden
-* Politische Artikel erscheinen als **responsive Kachel-Liste**
-* URLs können einfach in den Komponenten ergänzt werden
+* Menüeinträge anpassen in `navigation_component.html`
 
----
+### **Theme anpassen**
 
-## ⚖️ Rechtliche Hinweise
+* Farbvariablen in `styles.css` (`:root`) ändern:
 
-Die Webseite enthält:
-
-* Vollständiges Impressum
-* DSGVO-konforme Datenschutzerklärung
-
-Alle Inhalte sind Eigentum der **BürgerFreundlichenPartei (BFREI)** und dürfen nicht ohne Genehmigung verwendet werden.
+    * `--bfrei-blue`
+    * `--bfrei-orange`
+    * `--color-card-bg`
+    * usw.
 
 ---
 
