@@ -528,24 +528,72 @@ img {
 }
 
 /* ============================
-   Footer
+   Responsive Footer Layout
    ============================ */
 
-footer {
+.footer {
     background-color: var(--color-footer-bg);
     color: var(--color-footer-text);
+    padding: 2rem 1rem;
     text-align: center;
-    padding: 1rem 0;
 }
 
-footer a {
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.footer-section h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    color: var(--color-footer-text);
+}
+
+.footer-section a {
+    display: inline-block;
+    margin: 0.25rem 0.4rem;
     color: var(--color-primary);
     text-decoration: none;
 }
 
-footer a:hover {
+.footer-section a:hover {
     text-decoration: underline;
 }
+
+.footer-section a .icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--color-footer-text); /* immer gut sichtbar, auch im Dark-Mode */
+    flex-shrink: 0;
+}
+
+.footer-section a:hover .icon {
+    transform: scale(1.25);
+}
+
+/* Desktop: Zweispaltig */
+@media (min-width: 700px) {
+    .footer-inner {
+        flex-direction: row;
+        justify-content: center;
+        gap: 4rem;
+        text-align: left;
+    }
+
+    .footer-section {
+        min-width: 200px;
+    }
+}
+
+.footer-copy {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--color-footer-text);
+}
+
 /* ============================
    Kontodaten / Spendenkonto
    ============================ */
