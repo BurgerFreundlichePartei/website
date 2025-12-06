@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Allgemeine Head-Komponenten -->
+    <script src="web-component/js/head_meta_component.js" defer></script>
+    <script src="web-component/js/head_link_component.js" defer></script>
+    <script src="web-component/js/favicon_component.js" defer></script>
+
+    <!-- Seiten-spezifische Head-/Schema-Komponenten für Petitionen -->
+    <script src="web-component/js/petitionen_head_meta_component.js" defer></script>
+    <script src="web-component/js/petitionen_schema_head_component.js" defer></script>
+
+    <!-- Layout-Komponenten -->
+    <script src="web-component/js/header_component.js" defer></script>
+    <script src="web-component/js/navigation_component.js" defer></script>
+    <script src="web-component/js/footer_component.js" defer></script>
+
+    <!-- Inhaltliche Komponente für Petitionen -->
+    <script src="web-component/js/petition_list_component.js" defer></script>
+
+    <!-- Schema.org / Meta-Rendering -->
+    <petitionen-schema-component></petitionen-schema-component>
+
+    <head-meta-component></head-meta-component>
+    <petitionen-head-meta-component></petitionen-head-meta-component>
+    <head-link-component></head-link-component>
+    <favicon-component></favicon-component>
+</head>
+<body>
+
+<header-component></header-component>
+<navigation-component></navigation-component>
+
+<main>
+
+    <!-- Optional: Ein eigener Hero/Intro-Block kann ebenfalls als Web-Component ausgelagert werden -->
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>Petitionen</h1>
+            <p class="hero-text">
+                Konkrete Forderungen an Politik und Verwaltung – eingebracht von Bürgerinnen und Bürgern,
+                gebündelt von BFREI. Hier findest du laufende und geplante Petitionen, die unser Ziel
+                eines bürgerfreundlichen Staates direkt voranbringen.
+            </p>
+        </div>
+    </section>
+
+    <!-- Liste der Petitionen als Web-Component -->
+    <petition-list-component></petition-list-component>
+
+</main>
+
+<footer-component></footer-component>
+
+</body>
+</html>

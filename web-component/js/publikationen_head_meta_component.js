@@ -1,4 +1,4 @@
-class PublikationenIndexHeadMetaComponent extends HTMLElement {
+class PublikationenHeadMetaComponent extends HTMLElement {
     connectedCallback() {
         fetch('web-component/html/publikationen_head_meta_component.html')
             .then(response => response.text())
@@ -10,4 +10,4 @@ class PublikationenIndexHeadMetaComponent extends HTMLElement {
     }
 }
 
-customElements.define('publikationen-head-meta-component', PublikationenIndexHeadMetaComponent);
+customElements.define('publikationen-head-meta-component', PublikationenHeadMetaComponent);
