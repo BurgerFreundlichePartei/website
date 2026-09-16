@@ -13,7 +13,7 @@ erforderlichen Informationen bereit (Impressum, Datenschutzerklärung).
 - `publikationen.html` – Übersicht über Bücher und politische Artikel.
 - `vision.html` – Ausführliche Darstellung der Vision der Partei.
 - `ziele.html` – Vollständige Liste der politischen Ziele.
-- `spenden.html` – Spendenübersicht inkl. Kontodaten-Komponente.
+- `spenden.html` – Spendenseite mit Kontakt-Hinweis.
 - `impressum.html` – Gesetzlich vorgeschriebenes Impressum.
 - `datenschutzerklaerung.html` – Datenschutzerklärung gemäß DSGVO.
 
@@ -25,7 +25,6 @@ erforderlichen Informationen bereit (Impressum, Datenschutzerklärung).
 - `web-component/html/navigation_component.html`  
 - `web-component/html/booklist_component.html`  
 - `web-component/html/article_list_component.html`  
-- `web-component/html/bank_account_component.html`  
 - *(weitere Komponenten unter `/html` und `/js`)*
 
 **Assets**
@@ -44,7 +43,6 @@ erforderlichen Informationen bereit (Impressum, Datenschutzerklärung).
 - Header, Navigation, Footer
 - Buchliste (inkl. Amazon-/EPUB-/GitHub-Links)
 - Artikelliste
-- Bank-/Spenden-Komponente mit Copy-Buttons (IBAN, BIC)
 - Saubere Trennung: HTML, JS, CSS unabhängig voneinander wartbar
 
 ### ♿ **Barrierefreiheit**
@@ -76,9 +74,6 @@ erforderlichen Informationen bereit (Impressum, Datenschutzerklärung).
 3. Seite öffnen:
    **[http://localhost:8000](http://localhost:8000)**
 
-*(Hinweis: Die Clipboard-Funktion (IBAN/BIC kopieren) benötigt einen sicheren Kontext.
-Sie funktioniert vollständig unter HTTPS und eingeschränkt lokal.)*
-
 ---
 
 ## 🌐 Deployment (GitHub Pages)
@@ -100,10 +95,6 @@ Sie funktioniert vollständig unter HTTPS und eingeschränkt lokal.)*
 
 * Neue politische Artikel einfach in `article_list_component.html` ergänzen
 * Neue Bücher in `booklist_component.html` hinzufügen
-
-### **Kontodaten aktualisieren**
-
-* Spendenkonto anpassen in `bank_account_component.html`
 
 ### **Navigation erweitern**
 
