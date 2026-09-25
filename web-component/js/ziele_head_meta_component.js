@@ -1,6 +1,6 @@
-class SpendenHeadMetaComponent extends HTMLElement {
+class ZieleHeadMetaComponent extends HTMLElement {
     connectedCallback() {
-        fetch('web-component/html/spenden_head_meta_component.html')
+        fetch('web-component/html/ziele_head_meta_component.html')
             .then(response => response.text())
             .then(html => {
                 const template = document.createElement('template');
@@ -10,4 +10,4 @@ class SpendenHeadMetaComponent extends HTMLElement {
     }
 }
 
-customElements.define('spenden-head-meta-component', SpendenHeadMetaComponent);
+customElements.define('ziele-head-meta-component', ZieleHeadMetaComponent);

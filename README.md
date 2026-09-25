@@ -13,7 +13,8 @@ erforderlichen Informationen bereit (Impressum, Datenschutzerklärung).
 - `publikationen.html` – Übersicht über Bücher und politische Artikel.
 - `vision.html` – Ausführliche Darstellung der Vision der Partei.
 - `ziele.html` – Vollständige Liste der politischen Ziele.
-- `spenden.html` – Spendenseite mit Kontakt-Hinweis.
+- `mitmachen.html` – Wege zur Unterstützung: Mitgliedschaft, Petitionen, Programmarbeit.
+- `spenden.html` – Weiterleitung auf `mitmachen.html` (alte URL bleibt erreichbar).
 - `impressum.html` – Gesetzlich vorgeschriebenes Impressum.
 - `datenschutzerklaerung.html` – Datenschutzerklärung gemäß DSGVO.
 
