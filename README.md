@@ -42,7 +42,7 @@ erforderlichen Informationen bereit (Impressum, Datenschutzerklärung).
 
 ### 🧩 **Modulare Architektur (Web Components)**
 - Header, Navigation, Footer
-- Buchliste (inkl. Amazon-/EPUB-/GitHub-Links)
+- Buchliste (Universal-Links über Booklinker, leiten zum Amazon-Shop des Lesers)
 - Artikelliste
 - Saubere Trennung: HTML, JS, CSS unabhängig voneinander wartbar
 
